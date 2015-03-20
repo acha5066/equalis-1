@@ -1,0 +1,1 @@
+A jQuery plugin that equalises element heights.

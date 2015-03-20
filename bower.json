@@ -1,0 +1,17 @@
+{
+  "name": "equalis",
+  "version": "1.0.0",
+  "authors": [
+    "Elliot Mitchum <elliot@ellio7.com>"
+  ],
+  "description": "A jQuery plugin that equalises element heights.",
+  "license": "MIT",
+  "homepage": "https://github.com/ellioseven/equalis",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
