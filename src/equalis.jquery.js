@@ -1,10 +1,10 @@
 (function ( $, window, document, undefined ) {
 
-    var pluginName = "equalis",
+    var pluginName = "equalise",
         defaults = {
             items: '> div',
             breakpoint: 768,
-            className: pluginName
+            button: false
         };
 
     function Plugin ( element, options ) {
@@ -19,7 +19,7 @@
     $.extend(Plugin.prototype, {
         init: function () {
             var plugin = this;
-            $(plugin.element).addClass(plugin.settings.className);
+            $(plugin.element).addClass('equalise');
             $.each(plugin.settings.items, function(key, value){
                 plugin.elems.push($(plugin.element).find(value));
             });
@@ -59,6 +59,9 @@
                     $(this).addClass('equalise-item');
                 }
             });
+            if(plugin.settings.button) {
+                plugin.positionButton(true);
+            }
         },
         destroy: function() {
             var plugin = this;
@@ -68,6 +71,24 @@
                     $(this).removeAttr('style');
                 });
             });
+            if(plugin.settings.button) {
+                plugin.positionButton(false);
+            }
+        },
+        positionButton: function(active) {
+            var plugin = this,
+                button = $(plugin.settings.button);
+            if( button.length ) {
+                if( active ) {
+                    button.addClass('equalise-button');
+                    button.css({
+                        position: 'absolute'
+                    });
+                } else {
+                    button.removeClass('equalise-button');
+                    button.removeAttr('style');
+                }
+            }
         }
     });
 
