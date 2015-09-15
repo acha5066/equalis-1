@@ -2,7 +2,7 @@
 
   var pluginName = "equalise",
     defaults = {
-      items: '> div',
+      items: ['> div'],
       breakpoint: 768,
       button: false
     };
