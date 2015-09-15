@@ -1,3 +1,8 @@
+/**
+ * Equalis
+ * A jQuery plugin that equalises element heights.
+ */
+
 (function ($, window, document, undefined) {
 
   var pluginName = "equalise",
